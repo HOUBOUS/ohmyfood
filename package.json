@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
-    },
-    
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HOUBOUS/ohmyfood.git"
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HOUBOUS/ohmyfood/issues"
   },
-  "homepage": "https://github.com/HOUBOUS/ohmyfood#readme"
+  "homepage": "https://github.com/HOUBOUS/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
 }

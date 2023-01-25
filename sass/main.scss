@@ -1,87 +1,193 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap');
-*{
-    box-sizing: border-box;
-}
-
-body{
-    margin: 0px;
-}
-
-h2{
-    font-size: 24px;
-    font-weight: 700;
-
-}
-
-header h1{
-    font-style: italic;
-    font-size: 30px;
-}
-
-header{
-    position: relative;
-    height: 63px;
-    font-family:"shrikhand", sans-serif;
-    text-align: center;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25)
-}
+@import "./sass/base.scss";
+@import "./sass/layouts/header.scss";
+@import "./sass/utils.variables";
 
 main{
-    font-family: "Roboto", sans-serif;
-      
-}
- /**Location**/
-main .location{
-    background-color: #EAEAEA;
-    text-align: center;
-    padding: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  padding: 20px;
+  margin: 0px;
+  
 }
 
-main p{
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 20px;
-
+h2 {
+  font-size: 24px;
+  font-weight: 700;
 }
+
+h3{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+header h1 {
+  font-style: italic;
+  font-size: 30px;
+}
+
+
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+/**Location**/
+main .location {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main p {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
 /* Explorer */
-
-.explorer{
-    text-align: center;
-    background-color: #D2D2D2;
-    height: 287px;
+.explorer {
+  text-align: center;
+  background-color: #D2D2D2;
+  height: 287px;
 }
 
-.explorer p{
-    font-size: 18px;
-    font-weight: 300;
-    padding-bottom: 30px;
-
-}
-.explorer button{
-    font-size: 16px;
-    font-weight: 500;
-        
+.explorer p {
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 30px;
 }
 
-.explorer h2{
-    margin: 0px;
+.explorer button {
+  font-size: 16px;
+  font-weight: 500;
 }
 
-button{
-    width: 218px;
-    height: 50px;
-    color: #FFFFFF;
-    border-radius: 25px;
-    background: linear-gradient(#9356DC 20%,#FF79DA 100%);
+.explorer h2 {
+  margin: 0px;
+}
+
+button {
+  width: 218px;
+  height: 50px;
+  color: #FFFFFF;
+  border-radius: 25px;
+  background: linear-gradient(#9356DC 20%, #FF79DA 100%);
+}
+
+main h2 {
+  text-align: center;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
+.choice{
+  height: 440px;
 
 }
 
-main h2{
-    text-align: center;
+.choice ol{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 25px;
+  
+  
 }
+
+.choice li{
+  background-color: #F6F6F6;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: compteListe;
+  gap: 25px;
+
+}
+
+li::before {
+  content: counter(compteListe) " ";
+  counter-increment: compteListe 1;
+  background: #9356DC;
+  height: 25px;
+  width: 25px;
+  bottom: 15px;
+  border-radius: 80%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -13px;
+
+}
+
+._i{
+  color: $grey-4;
+  
+}
+
+/**Menus**/
+
+
+.menus{
+  display: flex;    
+  flex-direction: column;
+  height: 1223px;
+  border: 5px solid blue;
+  background-color: $primary-purpule;
+  padding: 20px;
+  background: $grey-4;
+
+}
+
+.menus div{
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 251px;
+  border-radius: 15px;
+  border: 5px solid red;
+  background: $primary-white;
+
+}
+
+.menus img{
+  width: 100%;
+  height: 69%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+
+}
+
+
+
+/***Responsive***/
+
+/**Desktop**/
+@media screen and (min-width: 992px) {
+
+  .choice ol{
+    flex-direction: row;
+       
+    
+  }
+
+  .menus{
+    flex-direction: row;
+  }
+
+
+}
+
+
