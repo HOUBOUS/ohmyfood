@@ -1,17 +1,79 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "./sass/base.scss";
- *   |         ^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"./sass/base.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 1:9  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
+
+h2{
+  font-weight: 700;
+  font-size: 24px;
+
+}
+
+main{
+  font-family: "Roboto", sans-serif;
+
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  position: relative;
+  margin: Opx;
+  font-family: "shrikhand", sans-serif;
+  text-align: center;
+  box-shadow: 0px 3px 4px #0000003F;
+  padding: 3px;
+  
+}
+
+/*Location*/
+
+main .location{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EAEAEA;
+  padding: 15px;
+  gap: 17px;
+
+}
+
+main .location p{
+  font-weight: 500;
+  font-size: 16px;
+
+}
+
+/*Explorer*/
+
+.explorer{
+  
+  text-align: center;
+}
+
+.explorer p{
+  font-weight: 300;
+  font-size: 18px;
+
+}
+
+.explorer button{
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 13px 19px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(to top,rgba(147, 86, 220, 1),rgba(255, 121, 218, 1));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 27px;
+
+}
+
+
+/*# sourceMappingURL=style.css.map */
