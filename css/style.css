@@ -75,5 +75,63 @@ main .location p{
 
 }
 
+/*Choice*/
+
+.choice{ 
+  padding-top: 48px;
+  
+  
+}
+
+.choice ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex-direction: column;
+  list-style-type: none;
+  counter-reset: compteListe;
+    
+}
+    
+
+.choice li::before{
+      counter-increment: compteListe 1; 
+      content: counter(compteListe) " ";
+           
+      color: #FFFFFF;
+      background-color: #9356DC;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+    }
+  
+.choice li{
+  background-color: #f6f6f6;
+  padding: 15px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+  }
+  
+.choice li i.fa-solid{
+  margin-right: 27px;
+
+}
+
+
+/***Responsive***/
+/*Desktop*/
+.choice ol{
+  
+  flex-direction: row;
+
+}
+
 
 /*# sourceMappingURL=style.css.map */

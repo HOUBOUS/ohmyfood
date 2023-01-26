@@ -10,6 +10,18 @@ body {
   margin: 0px;
 }
 
+main {
+  padding: 0 12px;
+}
+
+.choice ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-direction: column;
+  background: red;
+}
+
 header {
   position: relative;
   height: 63px;
